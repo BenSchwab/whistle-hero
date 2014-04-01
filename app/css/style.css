@@ -1,0 +1,64 @@
+@import url("fonts.css");
+
+body{
+   height: 100%;
+   width: 100%;
+   background-color: gray;
+   margin: 0;
+}
+header{
+   background-image: url("/images/background/nice_snow.png");
+   background-repeat: repeat;
+}
+
+header nav ul li{
+   display: inline;
+   line-height: 40px;
+   font-size: 20px;
+}
+
+header nav {
+   margin: 10px 10px 10px 10px;
+}
+
+.main_background{
+   background-image: url("/images/background/white_wall_hash.png");
+   background-repeat: repeat;
+}
+
+.title_font{
+   font-family: Exo;
+   font-size: 24px;
+}
+
+.main_header{
+   position: fixed;
+   width: 100%;
+   top: 0;
+   box-shadow: 0 5px 3px #000000;
+
+}
+
+.div_bar{
+   display: inline-block;
+   width: 2px;
+   height: 40px;
+}
+
+.inline{
+   display: inline;
+
+}
+
+.main_header_section{
+   font-size: 30px;
+}
+
+.content_div{
+   margin-top: 45px;
+}
+
+.header_section{
+
+}
+

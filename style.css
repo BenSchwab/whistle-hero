@@ -1,0 +1,68 @@
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
+}
+main {
+  background-color: #f2f5e9;
+  height: 100%;
+}
+#test {
+  height: 100%;
+}
+header {
+  background-color: #5d6b74;
+  padding: 10px;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+#head_shot {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  border: 5px #ff8c31 solid;
+  width: 50px;
+  height: 50px;
+  background: #94a4a5;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #94a4a5 0%, #ff8c31 25%, #5d6b74 48%, #364656 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #94a4a5), color-stop(25%, #ff8c31), color-stop(48%, #5d6b74), color-stop(100%, #364656));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #94a4a5 0%, #ff8c31 25%, #5d6b74 48%, #364656 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #94a4a5 0%, #ff8c31 25%, #5d6b74 48%, #364656 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #94a4a5 0%, #ff8c31 25%, #5d6b74 48%, #364656 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #94a4a5 0%, #ff8c31 25%, #5d6b74 48%, #364656 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#94a4a5', endColorstr='#364656', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+#link_box {
+  float: right;
+}
+.theme-gradient {
+  background: #94a4a5;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #94a4a5 0%, #ff8c31 25%, #5d6b74 48%, #364656 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #94a4a5), color-stop(25%, #ff8c31), color-stop(48%, #5d6b74), color-stop(100%, #364656));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #94a4a5 0%, #ff8c31 25%, #5d6b74 48%, #364656 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #94a4a5 0%, #ff8c31 25%, #5d6b74 48%, #364656 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #94a4a5 0%, #ff8c31 25%, #5d6b74 48%, #364656 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #94a4a5 0%, #ff8c31 25%, #5d6b74 48%, #364656 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#94a4a5', endColorstr='#364656', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
