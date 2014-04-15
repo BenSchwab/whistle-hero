@@ -1,0 +1,34 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Identification Pipeline overview}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Background}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Digital Sound and the Time Domain}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{Frequency Domain}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.3}{JavaScript Game Engine Constraints}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{General Methods}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Theory of Fourier Transform*}{section.3}% 8
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Mathematical Derivation}{subsection.3.1}% 9
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Trigonometric Interpretation}{subsection.3.1}% 10
+\BOOKMARK [2][-]{subsection.3.2}{Fast Fourier Transform}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{Project Methods and Design}{}% 12
+\BOOKMARK [2][-]{subsection.4.1}{The Identification Pipeline}{section.4}% 13
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Input}{subsection.4.1}% 14
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Feature Generation}{subsection.4.1}% 15
+\BOOKMARK [2][-]{subsection.4.2}{Temporal Features and Relevant Methods}{section.4}% 16
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Energy}{subsection.4.2}% 17
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Peak Detection}{subsection.4.2}% 18
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Envelope Analysis}{subsection.4.2}% 19
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Flatness}{subsection.4.2}% 20
+\BOOKMARK [2][-]{subsection.4.3}{Spectral Features and Relevant Methods}{section.4}% 21
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Envelope Analysis}{subsection.4.3}% 22
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Max Frequency}{subsection.4.3}% 23
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Feature Matcher and Output}{subsection.4.3}% 24
+\BOOKMARK [1][-]{section.5}{Results}{}% 25
+\BOOKMARK [2][-]{subsection.5.1}{Features of Whistles}{section.5}% 26
+\BOOKMARK [2][-]{subsection.5.2}{Features of Snaps}{section.5}% 27
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 28
+\BOOKMARK [2][-]{subsection.6.1}{Using the API}{section.6}% 29
+\BOOKMARK [2][-]{subsection.6.2}{Whistle Hero}{section.6}% 30
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 31
+\BOOKMARK [2][-]{subsection.7.1}{Future Work}{section.7}% 32
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Necessary Feature Specification}{subsection.7.1}% 33
+\BOOKMARK [3][-]{subsubsection.7.1.2}{Custom FFT implementation}{subsection.7.1}% 34
