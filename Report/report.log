@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 APR 2014 12:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 APR 2014 14:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -910,23 +910,23 @@ LaTeX Warning: Label `overflow' multiply defined.
 )
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Info: Redefining \microtypecontext on input line 89.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Info: Redefining \microtypecontext on input line 91.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -963,7 +963,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 89.
+(lastpage)             ! on input line 91.
  (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -984,10 +984,10 @@ ABD: EveryShipout initializing macros
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.8} into y
 our preamble.
- on input line 89.
+ on input line 91.
 
 \AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring OFF on input line 89.
+Package hyperref Info: Link coloring OFF on input line 91.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -996,15 +996,15 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count157
 )
-LaTeX Info: Redefining \ref on input line 89.
-LaTeX Info: Redefining \pageref on input line 89.
-LaTeX Info: Redefining \nameref on input line 89.
+LaTeX Info: Redefining \ref on input line 91.
+LaTeX Info: Redefining \pageref on input line 91.
+LaTeX Info: Redefining \nameref on input line 91.
 
 (./report.out) (./report.out)
 \@outlinefile=\write4
 \openout4 = `report.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 91.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 93.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
@@ -1018,7 +1018,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package tocbasic Info: character protrusion at toc deactivated on input line 10
-6.
+8.
  (./report.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
@@ -1035,12 +1035,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-Underfull \hbox (badness 3514) in paragraph at lines 17--17
- [][] [][]\OT1/cmr/m/n/10.95 (+20) Temporal Fea-tures and Rel-e-vant 
- []
-
-)
+))
 \tf@toc=\write5
 \openout5 = `report.toc'.
 
@@ -1048,37 +1043,37 @@ Underfull \hbox (badness 3514) in paragraph at lines 17--17
 
 
 ]
-<figures/HighLevelPipeline.png, id=195, 993.7125pt x 361.35pt>
+<figures/HighLevelPipeline.png, id=191, 993.7125pt x 361.35pt>
 File: figures/HighLevelPipeline.png Graphic file (type png)
 
 <use figures/HighLevelPipeline.png>
-Package pdftex.def Info: figures/HighLevelPipeline.png used on input line 116.
+Package pdftex.def Info: figures/HighLevelPipeline.png used on input line 118.
 (pdftex.def)             Requested size: 256.0748pt x 93.1162pt.
 
-Overfull \hbox (9.49251pt too wide) in paragraph at lines 116--117
+Overfull \hbox (9.49251pt too wide) in paragraph at lines 118--119
  [][] 
  []
 
 
-Underfull \hbox (badness 2326) in paragraph at lines 117--117
+Underfull \hbox (badness 2326) in paragraph at lines 119--119
 [][]|\OT1/cmr/m/it/10 (+20) High level overview of the iden-ti-fi-ca-tion
  []
 
-<figures/pressure_wave.png, id=197, 346.896pt x 69.861pt>
+<figures/pressure_wave.png, id=193, 346.896pt x 69.861pt>
 File: figures/pressure_wave.png Graphic file (type png)
 
 <use figures/pressure_wave.png>
 Package pdftex.def Info: figures/pressure_wave.png used on input line 139.
 (pdftex.def)             Requested size: 227.62204pt x 45.84082pt.
 
-<figures/quantization.png, id=198, 301.49448pt x 147.42194pt>
+<figures/quantization.png, id=194, 301.49448pt x 147.42194pt>
 File: figures/quantization.png Graphic file (type png)
 
 <use figures/quantization.png>
 Package pdftex.def Info: figures/quantization.png used on input line 149.
 (pdftex.def)             Requested size: 213.39566pt x 104.34636pt.
 
-<figures/snap_timedomain.png, id=199, 566.115pt x 325.215pt>
+<figures/snap_timedomain.png, id=195, 566.115pt x 325.215pt>
 File: figures/snap_timedomain.png Graphic file (type png)
 
 <use figures/snap_timedomain.png>
@@ -1089,14 +1084,14 @@ Package pdftex.def Info: figures/snap_timedomain.png used on input line 156.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2 <./figures/HighLevelPipeline.png> <./figures/pressure_wave.png> <./figures/q
-uantization.png>] <figures/twodomains.png, id=212, 289.08pt x 202.8378pt>
+uantization.png>] <figures/twodomains.png, id=208, 289.08pt x 202.8378pt>
 File: figures/twodomains.png Graphic file (type png)
 
 <use figures/twodomains.png>
 Package pdftex.def Info: figures/twodomains.png used on input line 168.
 (pdftex.def)             Requested size: 170.71652pt x 119.78468pt.
 
-<figures/PitchGraph.png, id=213, 252.05826pt x 105.30138pt>
+<figures/PitchGraph.png, id=209, 252.05826pt x 105.30138pt>
 File: figures/PitchGraph.png Graphic file (type png)
 
 <use figures/PitchGraph.png>
@@ -1110,14 +1105,14 @@ Overfull \hbox (9.49251pt too wide) in paragraph at lines 177--178
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/whistletimedomain.png, id=214, 1081.03876pt x 300.12125pt>
+<figures/whistletimedomain.png, id=210, 1081.03876pt x 300.12125pt>
 File: figures/whistletimedomain.png Graphic file (type png)
 
 <use figures/whistletimedomain.png>
 Package pdftex.def Info: figures/whistletimedomain.png used on input line 186.
 (pdftex.def)             Requested size: 227.62204pt x 63.19217pt.
 
-<figures/frequencydomainwhistle.png, id=215, 657.45625pt x 366.36874pt>
+<figures/frequencydomainwhistle.png, id=211, 657.45625pt x 366.36874pt>
 File: figures/frequencydomainwhistle.png Graphic file (type png)
 
 <use figures/frequencydomainwhistle.png>
@@ -1125,7 +1120,7 @@ Package pdftex.def Info: figures/frequencydomainwhistle.png used on input line
 187.
 (pdftex.def)             Requested size: 227.62204pt x 126.83899pt.
 
-<figures/JavascriptEventLoop.png, id=216, 1135.24126pt x 374.39874pt>
+<figures/JavascriptEventLoop.png, id=212, 1135.24126pt x 374.39874pt>
 File: figures/JavascriptEventLoop.png Graphic file (type png)
 
 <use figures/JavascriptEventLoop.png>
@@ -1139,114 +1134,122 @@ Overfull \hbox (9.49251pt too wide) in paragraph at lines 198--199
 
 [3 <./figures/snap_timedomain.png> <./figures/twodomains.png> <./figures/PitchG
 raph.png (PNG copy)> <./figures/whistletimedomain.png> <./figures/frequencydoma
-inwhistle.png>] <figures/EulersFormula.png, id=226, 157.18726pt x 144.54pt>
+inwhistle.png>] <figures/EulersFormula.png, id=222, 157.18726pt x 144.54pt>
 File: figures/EulersFormula.png Graphic file (type png)
 
 <use figures/EulersFormula.png>
 Package pdftex.def Info: figures/EulersFormula.png used on input line 222.
 (pdftex.def)             Requested size: 113.81102pt x 104.65756pt.
 
-<figures/eighthroots.jpg, id=227, 283.0575pt x 277.035pt>
+<figures/eighthroots.jpg, id=223, 283.0575pt x 277.035pt>
 File: figures/eighthroots.jpg Graphic file (type jpg)
 
 <use figures/eighthroots.jpg>
-Package pdftex.def Info: figures/eighthroots.jpg used on input line 240.
+Package pdftex.def Info: figures/eighthroots.jpg used on input line 238.
 (pdftex.def)             Requested size: 113.81102pt x 111.38693pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (2.3293pt too wide) in paragraph at lines 255--255
+Overfull \hbox (2.3293pt too wide) in paragraph at lines 257--257
 [] 
  []
 
 [4 <./figures/JavascriptEventLoop.png> <./figures/EulersFormula.png (PNG copy)>
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
 [5 <./figures/eighthroots.jpg>]
-<figures/InputDiagram.png, id=256, 1036.87375pt x 276.03125pt>
+<figures/InputDiagram.png, id=252, 1036.87375pt x 276.03125pt>
 File: figures/InputDiagram.png Graphic file (type png)
 
 <use figures/InputDiagram.png>
-Package pdftex.def Info: figures/InputDiagram.png used on input line 332.
+Package pdftex.def Info: figures/InputDiagram.png used on input line 341.
 (pdftex.def)             Requested size: 227.62204pt x 60.59648pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 367.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 377.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 367.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 377.
  [6 <./figures/InputDiagram.png>]
-<figures/FeatureMatcherFuture.png, id=268, 883.3pt x 351.3125pt>
+<figures/FeatureMatcherFuture.png, id=263, 883.3pt x 351.3125pt>
 File: figures/FeatureMatcherFuture.png Graphic file (type png)
 
 <use figures/FeatureMatcherFuture.png>
-Package pdftex.def Info: figures/FeatureMatcherFuture.png used on input line 39
-3.
+Package pdftex.def Info: figures/FeatureMatcherFuture.png used on input line 40
+4.
 (pdftex.def)             Requested size: 227.62204pt x 90.52963pt.
 
-<figures/whistle_frame_t.png, id=269, 1103.12125pt x 349.305pt>
+<figures/whistle_frame_t.png, id=264, 1103.12125pt x 349.305pt>
 File: figures/whistle_frame_t.png Graphic file (type png)
 
 <use figures/whistle_frame_t.png>
-Package pdftex.def Info: figures/whistle_frame_t.png used on input line 408.
+Package pdftex.def Info: figures/whistle_frame_t.png used on input line 419.
 (pdftex.def)             Requested size: 227.62204pt x 72.07701pt.
 
-<figures/whistle_frame_f.png, id=270, 681.54625pt x 353.32pt>
+<figures/whistle_frame_f.png, id=265, 681.54625pt x 353.32pt>
 File: figures/whistle_frame_f.png Graphic file (type png)
 
 <use figures/whistle_frame_f.png>
-Package pdftex.def Info: figures/whistle_frame_f.png used on input line 409.
+Package pdftex.def Info: figures/whistle_frame_f.png used on input line 420.
 (pdftex.def)             Requested size: 227.62204pt x 118.00307pt.
- [7 <./figures/FeatureMatcherFuture.png (PNG copy)> <./figures/whistle_frame_t.
-png> <./figures/whistle_frame_f.png>]
-<figures/snapTimeDomainFrame.png, id=279, 641.39626pt x 327.2225pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7 <./figures/FeatureMatcherFuture.png (PNG copy)>]
+<figures/snapTimeDomainFrame.png, id=274, 641.39626pt x 327.2225pt>
 File: figures/snapTimeDomainFrame.png Graphic file (type png)
 
 <use figures/snapTimeDomainFrame.png>
-Package pdftex.def Info: figures/snapTimeDomainFrame.png used on input line 423
+Package pdftex.def Info: figures/snapTimeDomainFrame.png used on input line 434
 .
 (pdftex.def)             Requested size: 227.62204pt x 116.12234pt.
 
-<figures/SnapFreqDomainFrame.png, id=280, 686.565pt x 377.41pt>
+<figures/SnapFreqDomainFrame.png, id=275, 686.565pt x 377.41pt>
 File: figures/SnapFreqDomainFrame.png Graphic file (type png)
 
 <use figures/SnapFreqDomainFrame.png>
-Package pdftex.def Info: figures/SnapFreqDomainFrame.png used on input line 424
+Package pdftex.def Info: figures/SnapFreqDomainFrame.png used on input line 435
 .
 (pdftex.def)             Requested size: 227.62204pt x 125.12155pt.
 
-<figures/whistleheroproto.png, id=281, 1445.4pt x 903.375pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/whistleheroproto.png, id=276, 1445.4pt x 903.375pt>
 File: figures/whistleheroproto.png Graphic file (type png)
 
 <use figures/whistleheroproto.png>
-Package pdftex.def Info: figures/whistleheroproto.png used on input line 439.
+Package pdftex.def Info: figures/whistleheroproto.png used on input line 450.
 (pdftex.def)             Requested size: 227.62204pt x 142.25475pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
 []\OT1/cmr/m/n/10.95 (+20) A pro-to-type of the game is on \OT1/cmr/bx/n/10.95 
 ben-
  []
 
 
-Underfull \hbox (badness 1014) in paragraph at lines 444--445
+Underfull \hbox (badness 1014) in paragraph at lines 455--456
 \OT1/cmr/bx/n/10.95 schwab.github.io\OT1/cmr/m/n/10.95 (+20) , but a lot of the
  logic has
  []
 
+[8 <./figures/whistle_frame_t.png> <./figures/whistle_frame_f.png> <./figures/s
+napTimeDomainFrame.png> <./figures/SnapFreqDomainFrame.png> <./figures/whistleh
+eroproto.png>]
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-[8 <./figures/snapTimeDomainFrame.png> <./figures/SnapFreqDomainFrame.png> <./f
-igures/whistleheroproto.png>]
-Underfull \hbox (badness 4036) in paragraph at lines 473--475
+
+Underfull \hbox (badness 4036) in paragraph at lines 484--486
 []\OT1/cmr/m/n/10.95 (+20) Diemo Schwarz, In-stitu de la
  []
 
@@ -1255,25 +1258,25 @@ AED: lastpage setting LastPage
 [9
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 485.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 485.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 496.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 496.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 485.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 485.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 496.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 496.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: E7A5C4DB319B46C1CF4C4BA96630097D;2385.
+(rerunfilecheck)             Checksum: 7F80754D7851B2C7DFD02473C3F1EA29;2298.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 485.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 496.
  ) 
 Here is how much of TeX's memory you used:
  26920 strings out of 493315
- 578860 string characters out of 6137904
- 847625 words of memory out of 5000000
- 29639 multiletter control sequences out of 15000+600000
- 28208 words of font info for 124 fonts, out of 8000000 for 9000
+ 578836 string characters out of 6137904
+ 848625 words of memory out of 5000000
+ 29638 multiletter control sequences out of 15000+600000
+ 28259 words of font info for 125 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  74i,15n,78p,1233b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1294,10 +1297,10 @@ st/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2013/texmf-dis
 t/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
 /type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
 /urw/helvetic/uhvro8a.pfb>
-Output written on report.pdf (9 pages, 669147 bytes).
+Output written on report.pdf (9 pages, 670964 bytes).
 PDF statistics:
- 380 PDF objects out of 1000 (max. 8388607)
- 327 compressed objects within 4 object streams
- 79 named destinations out of 1000 (max. 500000)
- 29047 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 374 PDF objects out of 1000 (max. 8388607)
+ 321 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 29039 words of extra memory for PDF output out of 29859 (max. 10000000)
 

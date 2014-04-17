@@ -2,11 +2,12 @@ var WhistleGame  = (function() {
 
    var canv;
    var ctx;
-   var map = [{radius: 20, time: 600},{radius: 80, time: 500},{radius: 50, time: 400},{radius: 50, time: 300},{radius: 100, time: 200},{radius: 50, time: 5}];
+   var map = [{radius: 20, time: 1000},{radius: 80, time: 850},{radius: 50, time: 700},{radius: 50, time: 450},{radius: 100, time: 350},{radius: 50, time: 150}];
    var gameCircle = new CircleEntity(400,250, 50);
    var camera = {x:0, y:0};
    var pitch = 500;
    var circles = [];
+   var tarCircles = [];
    var gameWidth;
    var gameHeight;
    var score = 0;
@@ -45,11 +46,24 @@ var WhistleGame  = (function() {
       };
    }
 
+   function writeScore(context){
+       context.fillStyle = "blue";
+      context.font = "bold 16px Arial";
+      context.fillText("Score: "+score, 50, 50);
+   }
+
 
 
    function stampDown(){
-
+      tarCircles.forEach(function(circle){
+         score+= 2*areaOfIntersection(circle.x, circle.y, circle.radius, gameCircle.x, gameCircle.y, gameCircle.radius);
+         //console.log(ar);
+         //console.log(circle);
+      });
+      score -= Math.PI*gameCircle.radius*gameCircle.radius;
+      //console.log(score);
    }
+
 
    function inputProcessor(e){
       switch(e.detail.type){
@@ -72,6 +86,7 @@ var WhistleGame  = (function() {
    function onSnap(e){
       gameCircle.snapFrame = 5;
       circles.push(new CircleEntity(gameCircle.x, gameCircle.y, gameCircle.radius,"red"));
+      stampDown();
    }
 
    var frameWidth = 200;
@@ -82,7 +97,7 @@ var WhistleGame  = (function() {
       if(map[map.length-1]&&map[map.length-1].time<curFrame){
          var circle = map.pop();
          var gCircle = new CircleEntity(camera.x+gameWidth, gameHeight/2, circle.radius, 'yellow');
-         circles.push(gCircle);
+         tarCircles.push(gCircle);
 
       }
    }
@@ -97,6 +112,20 @@ var WhistleGame  = (function() {
       gameCircle.x +=2.5;
       curFrame++;
       gameCircle.snapFrame --;
+      if(circles.length>0){
+         circles = circles.filter(function(circle){
+            if(circle.x+circle.radius-camera.x<0){
+               return false;
+            }
+            return true;
+         });
+      }
+       tarCircles = tarCircles.filter(function(circle){
+            if(circle.x+circle.radius-camera.x<0){
+               return false;
+            }
+            return true;
+         });
 
    }
 
@@ -104,16 +133,66 @@ var WhistleGame  = (function() {
       ctx.clearRect(0,0, gameWidth, gameHeight);
       ctx.fillStyle = "black";
       ctx.fillRect(0,0,gameWidth, gameHeight);
+       tarCircles.forEach(function(circ){
+            circ.draw(ctx);
 
-      circles.forEach(function(circ){
-         circ.draw(ctx);
+         });
 
-      });
+         circles.forEach(function(circ){
+            circ.draw(ctx);
+
+         });
+         writeScore(ctx);
+
+
       gameCircle.draw(ctx);
 
    }
 
    init();
+
+
+
+
+
+   function areaOfIntersection(x0, y0, r0, x1, y1, r1)
+{
+  var rr0 = r0 * r0;
+  var rr1 = r1 * r1;
+  var d = Math.sqrt((x1 - x0) * (x1 - x0) + (y1 - y0) * (y1 - y0));
+
+  // Circles do not overlap
+  if (d > r1 + r0)
+  {
+    return 0;
+  }
+
+  // Circle1 is completely inside circle0
+  else if (d <= Math.abs(r0 - r1) && r0 >= r1)
+  {
+    // Return area of circle1
+    return Math.PI * rr1;
+  }
+
+  // Circle0 is completely inside circle1
+  else if (d <= Math.abs(r0 - r1) && r0 < r1)
+  {
+    // Return area of circle0
+    return Math.PI * rr0;
+  }
+
+  // Circles partially overlap
+  else
+  {
+    var phi = (Math.acos((rr0 + (d * d) - rr1) / (2 * r0 * d))) * 2;
+    var theta = (Math.acos((rr1 + (d * d) - rr0) / (2 * r1 * d))) * 2;
+    var area1 = 0.5 * theta * rr1 - 0.5 * rr1 * Math.sin(theta);
+    var area2 = 0.5 * phi * rr0 - 0.5 * rr0 * Math.sin(phi);
+
+    // Return area of intersection
+    return area1 + area2;
+  }
+}
 
 
 })();

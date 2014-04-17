@@ -15,7 +15,7 @@ FeatureMatcher = (function(){
          var sample = samples[i];
          if(sample.totalPower<this.powerThreshold){
             //console.log(sample.totalPower);
-            console.log("failed power");
+            //console.log("failed power");
             continue;
          }
          //console.log(sample);
@@ -43,14 +43,14 @@ FeatureMatcher = (function(){
                   window.dispatchEvent(new CustomEvent("soundinput.detect",{detail:{frequency: sample.maxFrequency, type:"snap"}}));
                }
                else{
-                  console.log("previous");
+                  //console.log("previous");
                }
                //console.log("yo");
                //console.log(sample);
 
             }
             else{
-               console.log("temporalFlatness");
+               //console.log("temporalFlatness");
             }
          }
          prevSample = sample;
