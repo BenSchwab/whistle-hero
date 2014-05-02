@@ -107,24 +107,24 @@ FeatureMatcher = (function(){
                 return true;
                }
                else{
-                  console.log("failed peaks",sample.betterPeaks);
+                  //console.log("failed peaks",sample.betterPeaks);
                   //console.log(sample.activePercent);
                }
             }
             else{
 
-              console.log("failed standard dev"+sample.spectralStandardDeviation);
+              //console.log("failed standard dev"+sample.spectralStandardDeviation);
               //failedHP.push(sample);
             }
 
          }
          else{
             //failedHP.push(sample);
-            console.log(sample.percussivePercent);
+            //console.log(sample.percussivePercent);
          }
       }
       else{
-         console.log("failed temp flat", sample.temporalFlatness);
+         //console.log("failed temp flat", sample.temporalFlatness);
       }
       /*
       if(sample.percussivePercent>0.2){
