@@ -1,3 +1,11 @@
+function plotSpectrum(sample){
+   plotScatter(sample.dbSpectrum);
+
+}
+function plotFrame(sample){
+   plotScatter(sample.frame);
+}
+
 function plotScatter(array){
 
    // data that you want to plot, I've used separate arrays for x and y values
@@ -63,5 +71,6 @@ g.selectAll("scatter-dots")
       .attr("cx", function (d,i) { return x(xdata[i]); } ) // translate x value
       .attr("r", 2) // radius of circle
       .style("opacity", 0.9); // opacity of circle
+return g;
 
 }

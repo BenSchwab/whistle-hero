@@ -2,6 +2,7 @@ var TemporalProcessor = (function(){
 
    function TemporalProcessor(standardEnergy){
       this.standardMaxEnergy = 0.3;
+      this.whiteEnergy = 0.02;
    }
 
 
@@ -41,7 +42,7 @@ var TemporalProcessor = (function(){
             max = sum;
          }
       }
-      audioSample.percussivePercent = max/audioSample.totalPower;
+      audioSample.percussivePercent = max/(audioSample.totalPower-this.whiteEnergy);
    };
    TemporalProcessor.prototype.normalizeEnergy = function(audioSample){
 

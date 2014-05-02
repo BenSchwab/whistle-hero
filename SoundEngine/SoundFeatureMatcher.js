@@ -4,7 +4,7 @@ FeatureMatcher = (function(){
       window.addEventListener('featurebuilder.samples', function(e){ this.matchSamples(e.detail);}.bind(this));
       this.powerThreshold = powerThreshold || 0.02;
       this.history = [];
-      this.historySize = 10;
+      this.historySize = 5;
       this.acceptableThreshold = 10;
       this.prevSample = null;
       this.snaps = [];
@@ -12,11 +12,12 @@ FeatureMatcher = (function(){
       this.snapIndex = [];
       this.whistleIndex = [];
       this.wholeHistory = [];
+      //window.wholeHistory = this.wholeHistory;
       this.index = 0;
-      window.failedHP = [];
+      //window.failedHP = [];
 
-      window.snaps = this.snaps;
-      window.whistles = this.whistles;
+      ///window.snaps = this.snaps;
+      //window.whistles = this.whistles;
    }
    FeatureMatcher.prototype.matchSamples = function(samples){
 
@@ -24,10 +25,11 @@ FeatureMatcher = (function(){
 
 
          var sample = samples[i];
-         this.wholeHistory.push(sample);
+        // this.wholeHistory.push(sample);
 
          if(sample.totalPower<this.powerThreshold){
             this.prevSample = sample;
+            this.addToHistory(sample);
             //console.log("failed power");
             continue;
          }
@@ -47,7 +49,7 @@ FeatureMatcher = (function(){
             for(var k =0; k<this.history.length; k++){
                if(this.history[k].isSnap){
                   emit = false;
-                 // console.log("REJECTED");
+                  console.log("REJECTED");
                   break;
                }
             }
@@ -75,8 +77,8 @@ FeatureMatcher = (function(){
                 // window.update2(sample.spectrum);
                 //console.log(sample);
                   //window.dispatchEvent(new CustomEvent("soundinput.detect",{detail:{frequency: sample.maxFrequency, type: "whistle"}}));
-                  this.whistles.push(sample);
-                  this.whistleIndex.push(this.index);
+                //  this.whistles.push(sample);
+                 // this.whistleIndex.push(this.index);
                   return true;
                }
                else{
@@ -96,31 +98,33 @@ FeatureMatcher = (function(){
    };
 
    FeatureMatcher.prototype.determineIfSnap = function(sample){
-      if(true){
-         if(sample.percussivePercent>0.60){
-            if(true){
+      if(sample.temporalFlatness<0.5){
+         if(sample.percussivePercent>0.7){
+            if(sample.spectralStandardDeviation>2000){
                if(sample.betterHighPeaks.length===0){
-               this.snaps.push(sample);
+
+               //this.snaps.push(sample);
                 return true;
                }
                else{
-                  console.log("failed peaks",sample.betterPeaks);
+                  //console.log("failed peaks",sample.betterPeaks);
                   //console.log(sample.activePercent);
                }
             }
             else{
 
-              console.log("failed maxpower"+sample.maxPower);
-
+              //console.log("failed standard dev"+sample.spectralStandardDeviation);
+              //failedHP.push(sample);
             }
 
          }
          else{
-            console.log(sample.percussivePercent);
+            //failedHP.push(sample);
+            //console.log(sample.percussivePercent);
          }
       }
       else{
-         //console.log(sample.activePercent);
+         //console.log("failed temp flat", sample.temporalFlatness);
       }
       /*
       if(sample.percussivePercent>0.2){

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1398989724 "report.tex" "report.pdf" "report" 1398989730
+["pdflatex"] 1399056124 "report.tex" "report.pdf" "report" 1399056128
   "/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/babel-english/english.ldf" 1367878877 6963 2e0cb3d93aa64508bdb0db58ae900d97 ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.def" 1368743226 42950 b2c89311c96d7b70c24e1365a2fa51ee ""
@@ -182,8 +182,9 @@
   "figures/SnapFreqDomainFrame.png" 1397573760 37964 79bfb6094ce9b595e1afc76e07502d36 ""
   "figures/eighthroots.jpg" 1397506792 16206 b98a022389ee28c4c0cb4f0ef73f08db ""
   "figures/frequencydomainwhistle.png" 1397438485 28933 0a50a017927405d079b34656a42d4153 ""
-  "figures/perceptronmodel.png" 1398987646 62804 6e2cc0462ca0fc729957541130028d2f ""
+  "figures/perceptronmodel.png" 1399048751 62256 eda5a793e93519e9e4e5b184beef9c8c ""
   "figures/pressure_wave.png" 1397433156 67675 765db622ccaba5eebc52a2ede90414ab ""
+  "figures/projectplot.png" 1399050758 50498 84be3c2051ac35f7155f23ef65921095 ""
   "figures/quantization.png" 1397433228 50613 0fbf0b2ed32a3b541c6712e99a49bd8c ""
   "figures/snapTimeDomainFrame.png" 1397573747 24927 df32c99793dadd0e2f7108eab5f93442 ""
   "figures/snap_timedomain.png" 1397435368 19154 b2db1f914612985ae6b8c12b95379f65 ""
@@ -192,10 +193,10 @@
   "figures/whistle_frame_t.png" 1397572468 33725 48783f9b2d0c2f8d88a7168224e96745 ""
   "figures/whistlehero.png" 1398985703 495818 5a816af1eabbdadcb63cb8fd3b9d6c36 ""
   "figures/whistletimedomain.png" 1397438626 30300 9ff55d3bd7a6cd6e8495980205bceaf6 ""
-  "report.aux" 1398989729 10989 b9c522afdd1b2d3b12827b44d3bc7086 ""
-  "report.out" 1398989729 2747 5da5d79815ba9b704dfd6250a9d5b240 ""
-  "report.tex" 1398989723 43293 6a5611c1864d05e6fbe94441f431340c ""
-  "report.toc" 1398989729 3408 8ccaa6fd48ccfdfaf6b90b69f79fe0f0 ""
+  "report.aux" 1399056128 11664 c4a14e45414e040e269fe1ad4970a6cf ""
+  "report.out" 1399056128 2826 c7b33b8509dea82e02aab3b9af0d8de1 ""
+  "report.tex" 1399056121 47725 18680c402314cf76f95b76cf2b767718 ""
+  "report.toc" 1399056128 3504 7a22f1c0dc4e515646e355446c2df65f ""
   (generated)
   "report.aux"
   "report.toc"

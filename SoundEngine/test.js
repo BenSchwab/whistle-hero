@@ -235,9 +235,16 @@ getLiveInput();
 
 
 document.getElementById("play").onclick = playBackgroundSong;
+document.getElementById("indie").onclick = playIndieBackgroundSong;
 var backgroundPromise = sLoader.loadSound("resources/whistle.mp3",context);
+ var backgroundPromiseIndie = sLoader.loadSound("resources/indie.mp3",context);
+
 
 function playBackgroundSong(){
   backgroundPromise.then(function(buffer){playSong(buffer);});
+}
+function playIndieBackgroundSong(){
+
+  backgroundPromiseIndie.then(function(buffer){playSong(buffer);});
 }
 
