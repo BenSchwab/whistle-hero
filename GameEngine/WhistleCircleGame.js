@@ -172,12 +172,12 @@ var WhistleGame  = (function() {
      // console.log(curFrame);
      //console.log(beatBox[beatBox.length-1]);
       if(beatBox.length>0&&curFrame%beat===0){
-        console.log("trying things");
+        //console.log("trying things");
          var circle = beatBox.pop();
          var gCircle = new RectEntity(camera.x+gameWidth, linespace*circle, 50, linespace);
          gCircle.color = "blue";
          tarCircles.push(gCircle);
-         console.log(tarCircles.length);
+         //console.log(tarCircles.length);
 
       }
    }
