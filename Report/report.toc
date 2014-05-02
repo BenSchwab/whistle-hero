@@ -6,29 +6,35 @@
 \contentsline {subsection}{\numberline {2.2}Frequency Domain}{3}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}JavaScript Game Engine Constraints}{3}{subsection.2.3}
 \contentsline {section}{\numberline {3}General Methods}{4}{section.3}
-\contentsline {subsection}{\numberline {3.1}Theory of Fourier Transform*}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Theory of Fourier Transform}{4}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Mathematical Derivation}{4}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Trigonometric Interpretation}{5}{subsubsection.3.1.2}
-\contentsline {subsection}{\numberline {3.2}Fast Fourier Transform}{5}{subsection.3.2}
-\contentsline {section}{\numberline {4}Project Methods and Design}{6}{section.4}
-\contentsline {subsection}{\numberline {4.1}Input}{6}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Feature Generation}{6}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Temporal Features and Relevant Methods}{6}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}Energy}{6}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}Peak Detection}{6}{subsubsection.4.2.3}
-\contentsline {subsubsection}{\numberline {4.2.4}Envelope Analysis}{7}{subsubsection.4.2.4}
-\contentsline {subsubsection}{\numberline {4.2.5}Flatness}{7}{subsubsection.4.2.5}
-\contentsline {subsubsection}{\numberline {4.2.6}Spectral Features and Relevant Methods}{7}{subsubsection.4.2.6}
-\contentsline {subsubsection}{\numberline {4.2.7}Envelope Analysis}{7}{subsubsection.4.2.7}
-\contentsline {subsubsection}{\numberline {4.2.8}Max Frequency}{7}{subsubsection.4.2.8}
-\contentsline {subsection}{\numberline {4.3}Feature Matcher and Output}{7}{subsection.4.3}
-\contentsline {section}{\numberline {5}Results}{7}{section.5}
-\contentsline {subsection}{\numberline {5.1}Features of Whistles}{7}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Features of Snaps}{8}{subsection.5.2}
-\contentsline {section}{\numberline {6}Discussion}{8}{section.6}
-\contentsline {subsection}{\numberline {6.1}Using the API}{8}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Whistle Hero}{8}{subsection.6.2}
-\contentsline {section}{\numberline {7}Conclusion}{9}{section.7}
-\contentsline {subsection}{\numberline {7.1}Future Work}{9}{subsection.7.1}
-\contentsline {subsubsection}{\numberline {7.1.1}Necessary Feature Specification}{9}{subsubsection.7.1.1}
-\contentsline {subsubsection}{\numberline {7.1.2}Custom FFT implementation}{9}{subsubsection.7.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2}Trigonometric Interpretation}{6}{subsubsection.3.1.2}
+\contentsline {subsection}{\numberline {3.2}Fast Fourier Transform}{6}{subsection.3.2}
+\contentsline {section}{\numberline {4}Project Methods and Design}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}Input}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Feature Generation}{8}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Temporal Features and Relevant Methods}{8}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Energy}{8}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Envelope Analysis}{8}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.4}Peak Detection}{8}{subsubsection.4.2.4}
+\contentsline {subsubsection}{\numberline {4.2.5}Flatness}{8}{subsubsection.4.2.5}
+\contentsline {subsubsection}{\numberline {4.2.6}Effective Duration}{8}{subsubsection.4.2.6}
+\contentsline {subsubsection}{\numberline {4.2.7}Percussive Partition}{8}{subsubsection.4.2.7}
+\contentsline {subsubsection}{\numberline {4.2.8}Percussive Percent}{8}{subsubsection.4.2.8}
+\contentsline {subsubsection}{\numberline {4.2.9}Spectral Features and Relevant Methods}{9}{subsubsection.4.2.9}
+\contentsline {subsubsection}{\numberline {4.2.10}Spectral Envelope}{9}{subsubsection.4.2.10}
+\contentsline {subsubsection}{\numberline {4.2.11}Max Frequency}{9}{subsubsection.4.2.11}
+\contentsline {subsubsection}{\numberline {4.2.12}SpectralSpread}{9}{subsubsection.4.2.12}
+\contentsline {subsection}{\numberline {4.3}Spectral Slope}{9}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Feature Matcher and Output}{9}{subsection.4.4}
+\contentsline {section}{\numberline {5}Results}{9}{section.5}
+\contentsline {subsection}{\numberline {5.1}Features of Whistles}{9}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Features of Snaps}{10}{subsection.5.2}
+\contentsline {section}{\numberline {6}Discussion}{10}{section.6}
+\contentsline {subsection}{\numberline {6.1}Using the API}{10}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Whistle Hero}{10}{subsection.6.2}
+\contentsline {section}{\numberline {7}Conclusion}{11}{section.7}
+\contentsline {subsection}{\numberline {7.1}Future Work}{11}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Necessary Feature Specification}{11}{subsubsection.7.1.1}
+\contentsline {subsubsection}{\numberline {7.1.2}Automatic Training}{11}{subsubsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.3}Better use of ST-FFT}{11}{subsubsection.7.1.3}

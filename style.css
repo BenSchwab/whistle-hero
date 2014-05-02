@@ -1,0 +1,29 @@
+.main{
+   text-align: center;
+}
+.control{
+   margin-top: 20px;
+   text-align: center;
+}
+#play{
+   font-size: 24px;
+}
+#hero{
+   font-size: 36px;
+   font-family: hero;
+}
+#gameCanv{
+     box-shadow: 0 0 5px 10px rgba(225, 205, 10, .6);
+
+}
+body{
+   background-image: url("resources/retina_wood.png");
+   background-repeat: "repeat";
+   font-family: hero;
+}
+
+@font-face
+{
+   font-family: hero;
+   src: url("resources/Chunkfive.otf");
+}

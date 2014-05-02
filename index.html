@@ -3,23 +3,40 @@
 <head>
    <meta charset="UTF-8">
    <title>Document</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
-   <h1>Whistle Hero Prototype</h1>
-   <h2>This game requires the use of headphones to work properly. It also must be used with Google Chrome.</h2>
-   <h2>Event:</h2>
-   <canvas id="canv" width="1" height="1"></canvas>
-   <canvas id="canvTwo" width="1" height="1"></canvas>
-   <canvas id="gameCanv" width="800" height="500"></canvas>
+   <div class="main">
+   <span>
+   <h1 id="hero">Whistle <span id="hero">Hero</span> </h1>
+
+   <canvas id="canv" width="0" height="0"></canvas>
+   <canvas id="canvTwo" width="0" height="0"></canvas>
+   <canvas id="gameCanv" width="1100" height="500"></canvas>
    <canvas id="amplitudeCanv" width="1" height="1"></canvas>
-      <h3>Whistle to match the size of the green circles to the yellow circles. Snap your fingers to "stamp" down. Paint that doesn't hit the circle loses points. Points are gained for paiting the circles.</h3>
+
+   </span>
+
+</div>
+<div class="control">
+   <button id="play">Click to Play!</button>
+   <p>Please wear headphones, unless your computer sound is off. Make sure to give the site permission to use microphone input. To replay, just refresh the page.</p>
+    <h3>Directions</h3>
+    <p>Whistle high and low to activate one of the three bars. (It will be yellow). Snap your finger or clap when the blue bars align with the yellow bar.</p>
+
+</div>
 
 
 
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+<script src="SoundEngine/vend/numeric.js"></script>
 <script src="SoundEngine/vend/dsp.js"></script>
+<script src="SoundEngine/SoundMath.js"></script>
 <script src="SoundEngine/SoundLoader.js"></script>
 <script src="SoundEngine/SoundVisualizer.js"></script>
+
 <!-- <script src="SoundVisualizerTest.js"></script> -->
 
 <script src="SoundEngine/TemporalProcessor.js"></script>
@@ -27,6 +44,7 @@
 <script src="SoundEngine/SoundFeatureMatcher.js"></script>
 <script src="SoundEngine/SoundFeatureBuilder.js"></script>
 <script src="SoundEngine/test.js"></script>
+<script src = "SoundEngine/quickchart.js"></script>
 <script src = "GameEngine/WhistleCircleGame.js"></script>
 </body>
 </html>

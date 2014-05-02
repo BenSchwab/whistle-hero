@@ -4,10 +4,13 @@ var TemporalProcessor = (function(){
       this.standardMaxEnergy = 0.3;
    }
 
+
+
    TemporalProcessor.prototype.processSample =function(audioSample,normalizeEnergy){
       this.calculateEnergy(audioSample);
+      this.percussivePercent(audioSample,400);
       if(normalizeEnergy){
-         this.normalizeEnergy(audioSample);
+        this.normalizeEnergy(audioSample);
       }
       audioSample.temporalPeaks = PeakProcessor.processPeak(audioSample.frame,5,0,0);
       //console.log(audioSample.temporalPeaks.length);
@@ -16,23 +19,29 @@ var TemporalProcessor = (function(){
 
    };
    TemporalProcessor.prototype.calculateEnergy = function(audioSample,timeTwo){
-      var totalPower = 0;
-      var maxPower = 0;
-      for(var i =0; i<audioSample.frame.length; i++){
-         var curPower = Math.abs(audioSample.frame[i]);
-         curPower = curPower*curPower;
-         totalPower += curPower;
-         if(curPower>maxPower){
-            maxPower = curPower;
+
+      audioSample.energyValues = SoundMath.squareValues(audioSample.frame);
+      audioSample.totalPower = SoundMath.sum(audioSample.energyValues);
+      audioSample.maxPower = SoundMath.maxValue(audioSample.frame).value;
+      audioSample.meanPower = audioSample.totalPower/(audioSample.energyValues.length);
+      audioSample.powerSpread = Math.sqrt(SoundMath.spread(SoundMath.ones(audioSample.energyValues.length), audioSample.energyValues, audioSample.meanPower));
+      audioSample.activePercent = SoundMath.activePercent(audioSample.meanPower, audioSample.energyValues);
+
+   };
+   TemporalProcessor.prototype.percussivePercent = function(audioSample,size){
+      var array = audioSample.frame;
+      var sum = 0;
+      var max = 0;
+      for(var i = 0; i<array.length; i++){
+         sum+=Math.abs(array[i]*array[i]);
+         if(i>size){
+            sum-=(array[i-size]*array[i-size]);
+         }
+         if(sum>max){
+            max = sum;
          }
       }
-      audioSample.totalPower = totalPower;
-      audioSample.maxPower = Math.sqrt(maxPower);
-     // console.log("mp1 "+audioSample.maxPower);
-      if(!isNaN(totalPower)&&timeTwo){
-         //console.log("tp"+totalPower);
-      }
-
+      audioSample.percussivePercent = max/audioSample.totalPower;
    };
    TemporalProcessor.prototype.normalizeEnergy = function(audioSample){
 

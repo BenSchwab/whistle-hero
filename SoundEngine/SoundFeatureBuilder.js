@@ -3,9 +3,9 @@ var FeatureBuilder = (function(TemporalProcessor, SpectralProcessor){
    function FeatureBuilder(windowSize, hopsize){
       this.queue =  new AudioQueue();
       this.windowSize = windowSize || 2048;
-      this.hopSize =  hopsize || 256;
+      this.hopSize =  hopsize || 512;
       this.temporalProcessor = new TemporalProcessor();
-      this.spectralProcessor = new SpectralProcessor();
+      this.spectralProcessor = new SpectralProcessor(this.windowSize, 44100);
    }
    FeatureBuilder.prototype.push = function(audioSample){
       this.queue.push(audioSample);
@@ -13,11 +13,11 @@ var FeatureBuilder = (function(TemporalProcessor, SpectralProcessor){
    };
 
 
-   //Todo: normalize energy?
+
    function processQueue(){
       var soundEvents =  [];
       var subArray = this.queue.peek(this.windowSize);
-      //console.log(this.windowSize);
+
 
       while(subArray){
          var soundSample =  new SoundSample(subArray);
@@ -85,8 +85,8 @@ var PeakProcessor = {
       neighbors = neighbors || 1;
       var peaks = [];
       for(var i = 0; i<array.length; i++){
-         var curVal = Math.abs(array[i]);
-         if(curVal<threshold){
+         var curVal = array[i];
+         if(curVal<threshold&&threshold!==0){
             continue;
          }
          var start = i-neighbors;
@@ -102,7 +102,7 @@ var PeakProcessor = {
             if(start===i){
                continue;
             }
-            var inspect =  Math.abs(array[start]);
+            var inspect =  array[start];
             if(inspect+sensitivity>=curVal){
                peak = false;
                break;

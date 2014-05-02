@@ -2,32 +2,85 @@ FeatureMatcher = (function(){
 
    function FeatureMatcher(powerThreshold){
       window.addEventListener('featurebuilder.samples', function(e){ this.matchSamples(e.detail);}.bind(this));
-      this.powerThreshold = powerThreshold || 0.01;
+      this.powerThreshold = powerThreshold || 0.02;
       this.history = [];
       this.historySize = 10;
       this.acceptableThreshold = 10;
       this.prevSample = null;
+      this.snaps = [];
+      this.whistles = [];
+      this.snapIndex = [];
+      this.whistleIndex = [];
+      this.wholeHistory = [];
+      this.index = 0;
+      window.failedHP = [];
+
+      window.snaps = this.snaps;
+      window.whistles = this.whistles;
    }
    FeatureMatcher.prototype.matchSamples = function(samples){
 
-      this.addToHistory(samples);
       for(var i = 0; i<samples.length; i++){
+
+
          var sample = samples[i];
+         this.wholeHistory.push(sample);
+
          if(sample.totalPower<this.powerThreshold){
-            //console.log(sample.totalPower);
+            this.prevSample = sample;
             //console.log("failed power");
             continue;
          }
          //console.log(sample);
-         if(sample.spectrumHighPeaks.length<2&&sample.spectrumHighPeaks.length>0){
+
+
+         this.prevSample = sample;
+         var isWhistle = this.determineIfWhistle(sample);
+         var isSnap = this.determineIfSnap(sample);
+         if(isWhistle){
+            sample.isWhistle = true;
+            window.dispatchEvent(new CustomEvent("soundinput.detect",{detail:{frequency: sample.maxFrequency, type: "whistle"}}));
+         }
+         if(isSnap){
+            var emit = true;
+            sample.isSnap = true;
+            for(var k =0; k<this.history.length; k++){
+               if(this.history[k].isSnap){
+                  emit = false;
+                 // console.log("REJECTED");
+                  break;
+               }
+            }
+            if(emit){
+               console.log("got a snap");
+               window.dispatchEvent(new CustomEvent("soundinput.detect",{detail:{frequency: sample.maxFrequency, type:"snap"}}));
+            }
+            //
+         }
+         this.addToHistory(sample);
+         this.index++;
+
+      }
+
+
+
+   };
+
+   FeatureMatcher.prototype.determineIfWhistle = function(sample){
+       if(sample.spectralStandardDeviation<2000){
            // console.log(sample.spectrumHighPeaks[0].frequency);
-            if(sample.temporalFlatness>0.6){
-               if(sample.maxFrequency>700&&sample.maxFrequency<3500){
+            if(sample.temporalFlatness>0.7&&sample.percussivePercent<0.5){
+               if(sample.maxFrequency>700&&sample.maxFrequency<3500&&sample.maxFrequencyIntensity>0.1){
                  // console.log("Detected whistle", sample.maxPower);
-                  window.dispatchEvent(new CustomEvent("soundinput.detect",{detail:{frequency: sample.maxFrequency, type: "whistle"}}));
+                // window.update2(sample.spectrum);
+                //console.log(sample);
+                  //window.dispatchEvent(new CustomEvent("soundinput.detect",{detail:{frequency: sample.maxFrequency, type: "whistle"}}));
+                  this.whistles.push(sample);
+                  this.whistleIndex.push(this.index);
+                  return true;
                }
                else{
-                  //console.log("filaed frequeny range", sample.maxFrequency);
+                  //console.log("filaed frequeny range and power", sample.maxFrequency);
                }
             }
             else{
@@ -35,14 +88,61 @@ FeatureMatcher = (function(){
             }
          }
          else{
-            //console.log("Failed high points", sample);
+            //console.log("Failed spectralStandardDeviation");
+            //window.failedHP.push(sample);
          }
-         if(sample.maxPower>0.8 ){
-            if(sample.temporalFlatness<0.5){
-               if(prevSample.maxPower<0.6){
-                  window.dispatchEvent(new CustomEvent("soundinput.detect",{detail:{frequency: sample.maxFrequency, type:"snap"}}));
+         return false;
+
+   };
+
+   FeatureMatcher.prototype.determineIfSnap = function(sample){
+      if(true){
+         if(sample.percussivePercent>0.60){
+            if(true){
+               if(sample.betterHighPeaks.length===0){
+               this.snaps.push(sample);
+                return true;
                }
                else{
+                  console.log("failed peaks",sample.betterPeaks);
+                  //console.log(sample.activePercent);
+               }
+            }
+            else{
+
+              console.log("failed maxpower"+sample.maxPower);
+
+            }
+
+         }
+         else{
+            console.log(sample.percussivePercent);
+         }
+      }
+      else{
+         //console.log(sample.activePercent);
+      }
+      /*
+      if(sample.percussivePercent>0.2){
+            if(sample.spectralCentroid>5000){//sample.temporalFlatness<0.5){
+               if(sample.spectralStandardDeviation>2000&&sample.spectralStandardDeviation<4000){//this.prevSample.maxPower<0.6){
+                  //console.log(sample.spectralFlatness);
+                  //console.log(sample.spectrumLowPeaks);
+                  //console.log(JSON.stringify(sample.spectrum));
+                  if(sample.maxFrequency>3000){
+
+                  }
+                 // window.update2(sample.spectrum);
+                 // console.log(sample);
+                 this.snaps.push(sample);
+                 this.snapIndex.push(this.index);
+                 return true;
+                  //window.dispatchEvent(new CustomEvent("soundinput.detect",{detail:{frequency: sample.maxFrequency, type:"snap"}}));
+               }
+              else{
+               console.log("failed spectral standard deviation",sample.spectralStandardDeviation);
+              // window.failedHP.push(sample);
+               return false;
                   //console.log("previous");
                }
                //console.log("yo");
@@ -51,27 +151,29 @@ FeatureMatcher = (function(){
             }
             else{
                //console.log("temporalFlatness");
+               return false;
             }
          }
-         prevSample = sample;
-
-      }
-
-
-   };
-
-   FeatureMatcher.prototype.scoreWhistle = function(sample){
-
-
+         else{
+            console.log("failed percussivePercent", sample.percussivePercent);
+         }*/
+      return false;
    };
 
    FeatureMatcher.prototype.compareEnvelopes = function(){
 
    };
+    FeatureMatcher.prototype.getSampleAtTime = function(time){
+      var index = Math.floor(time/(256/44100));
+      console.log(index);
+      return this.wholeHistory[index];
+   };
 
    FeatureMatcher.prototype.addToHistory = function(samples){
-      if(this.history.length)
-      this.history.extend(samples);
+      if(this.history.length>this.historySize){
+         this.history.shift();
+      }
+         this.history.push(samples);
    };
 
    return FeatureMatcher;
